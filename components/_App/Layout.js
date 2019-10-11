@@ -37,7 +37,7 @@ function Layout({ children, user }) {
           href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css'
         />
         <link rel='stylesheet' type='text/css' href='/static/styles.css' />
-        <title>ReactReserve</title>
+        <title>eCommerce</title>
       </Head>
       <Header user={user} />
       <Container
@@ -45,7 +45,8 @@ function Layout({ children, user }) {
         style={{
           paddingLeft: '7em',
           paddingRight: '7em',
-          paddingBottom: '7em'
+          paddingBottom: '7em',
+          marginTop: '55px'
         }}
       >
         {children}

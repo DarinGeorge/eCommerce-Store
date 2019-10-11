@@ -11,9 +11,8 @@ import {
   DropdownMenu,
   DropdownItem
 } from 'reactstrap';
-import styled from 'styled-components';
 import Link from 'next/link';
-import Router, { useRouter } from 'next/router';
+import Router from 'next/router';
 import NProgress from 'nprogress';
 import { handleLogout } from '../../utils/auth';
 
@@ -46,8 +45,21 @@ export default class Header extends React.Component {
 
     return (
       <div>
-        <Navbar color='light' light className='header' expand='md'>
-          <NavbarBrand href='/'>TECHXCHANGE</NavbarBrand>
+        <Navbar
+          style={{
+            background: '#ecebf0',
+            borderTop: '5px solid #007bff',
+            borderBottom: '1px solid #00000020',
+            position: 'fixed',
+            top: '0',
+            left: '0',
+            right: '0',
+            zIndex: '3'
+          }}
+          className='header'
+          expand='md'
+        >
+          <NavbarBrand href='/'>Logo</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className='ml-auto' navbar>

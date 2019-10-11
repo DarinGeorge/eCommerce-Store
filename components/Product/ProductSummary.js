@@ -110,7 +110,14 @@ const ProductSummary = ({ name, mediaUrl, _id, price, user }) => {
   return (
     <Summary>
       <Row>
-        <Col style={{ marginLeft: '-2em' }} xs={12}>
+        <Col
+          style={{
+            marginLeft: '-2em',
+            marginTop: '10px',
+            marginBottom: '10px'
+          }}
+          xs={12}
+        >
           Home <FontAwesomeIcon icon='long-arrow-alt-right' /> Products{' '}
           <FontAwesomeIcon icon='long-arrow-alt-right' /> {name}
         </Col>

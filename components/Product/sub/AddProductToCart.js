@@ -1,5 +1,5 @@
 import React from 'react';
-import { Input, InputGroup, InputGroupAddon, Button } from 'reactstrap';
+import { Button } from 'reactstrap';
 import { useRouter } from 'next/router';
 import axios from 'axios';
 import baseUrl from '../../../utils/baseUrl';
@@ -67,7 +67,7 @@ const AddProductToCart = ({ user, productId }) => {
           <FontAwesomeIcon icon='shopping-cart' />
         </Button>
       ) : (
-        <Button color='warning' onClick={router.push('/signup')}>
+        <Button color='warning' onClick={() => router.push('/signup')}>
           Sign Up To Purchase <FontAwesomeIcon icon='lock' />
         </Button>
       )}
