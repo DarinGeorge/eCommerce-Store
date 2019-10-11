@@ -20,3 +20,39 @@ body {
 .product-img {
   width: 100%;
 }
+
+.slick-next:before,
+.slick-prev:before {
+  display: none;
+}
+
+.slick-dots {
+  left: -65px;
+  top: 45.5%;
+  width: 15%;
+  height: 2px;
+  transform: rotate(90deg);
+}
+
+.slick-dots li {
+  margin: 0;
+  width: 30px;
+}
+
+.slick-dots li .dot-cont:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  content: '';
+  text-align: center;
+  opacity: .25;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+}
+.slick-dots li.slick-active .dot-cont:before{
+  opacity: .75;
+  color: #000;
+}

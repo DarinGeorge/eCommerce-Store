@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { Item, Label } from 'semantic-ui-react';
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import AddProductToCart from './sub/AddProductToCart';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
