@@ -1,0 +1,22 @@
+:root {
+  --bodyBg: #fff !important;
+  --progressBar: #54d1db;
+}
+
+body {
+  background-color: var(--bodyBg) !important;
+}
+
+#header {
+  background: var(--headerBg);
+}
+
+/* Overrides default styled accordion styles (too much bottom padding) */
+.ui.styled.accordion .content {
+  margin: 0;
+  padding: 0.5em 1em 0.75em !important;
+}
+
+.product-img {
+  width: 100%;
+}
