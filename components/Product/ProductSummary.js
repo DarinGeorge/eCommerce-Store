@@ -9,6 +9,20 @@ const Floater = styled.div`
   right: 7em;
   width: 350px;
   z-index: 2;
+
+  @media (max-width: 1440px) {
+    width: 300px;
+  }
+
+  @media (max-width: 1280px) {
+    width: 250px;
+    right: 5em;
+  }
+
+  @media (max-width: 1024px) {
+    position: unset;
+    width: 100%;
+  }
 `;
 
 const Reviews = styled.span`
@@ -85,9 +99,6 @@ const SocialLinks = styled.div`
     width: 26px !important;
     height: 26px;
   }
-  @media (max-width: 480px) {
-    transform: rotate(-90deg);
-  }
 `;
 
 const CartTitle = styled.p`
@@ -100,44 +111,51 @@ const CartTitle = styled.p`
 
 const Summary = styled.div`
   height: 80vh;
+
+  @media (max-width: 1024px) {
+    height: auto;
+  }
 `;
 
 const Details = styled.div`
   margin: 55% 0;
+
+  @media (max-width: 1024px) {
+    margin: 10px;
+  }
 `;
 
 const ProductSummary = ({ name, mediaUrl, _id, price, user }) => {
   return (
-    <Summary>
-      <Row>
-        <Col
-          style={{
-            marginLeft: '-2em',
-            marginTop: '10px',
-            marginBottom: '10px'
-          }}
-          xs={12}
-        >
-          Home <FontAwesomeIcon icon='long-arrow-alt-right' /> Products{' '}
-          <FontAwesomeIcon icon='long-arrow-alt-right' /> {name}
-        </Col>
-        <Col xs={3}>
-          <Details>
-            <FontAwesomeIcon icon='star' />
-            <FontAwesomeIcon icon='star' />
-            <FontAwesomeIcon icon='star' />
-            <FontAwesomeIcon icon='star' />
-            <FontAwesomeIcon icon={['far', 'star']} />
-            <Reviews>Reviews</Reviews>
-            <ProductName>{name}</ProductName>
-            <ProductPrice>$ {price}</ProductPrice>
-          </Details>
-        </Col>
-        <Col xs={6}>
-          <img className='product-img' src={mediaUrl} />
-        </Col>
-        <Col xs={3}></Col>
-        <Floater>
+    <Summary className='row'>
+      <Col
+        style={{
+          marginLeft: '-2em',
+          marginTop: '10px',
+          marginBottom: '10px'
+        }}
+        xs={12}
+      >
+        Home <FontAwesomeIcon icon='long-arrow-alt-right' /> Products{' '}
+        <FontAwesomeIcon icon='long-arrow-alt-right' /> {name}
+      </Col>
+      <Col xs={12} lg={3}>
+        <Details>
+          <FontAwesomeIcon icon='star' />
+          <FontAwesomeIcon icon='star' />
+          <FontAwesomeIcon icon='star' />
+          <FontAwesomeIcon icon='star' />
+          <FontAwesomeIcon icon={['far', 'star']} />
+          <Reviews>Reviews</Reviews>
+          <ProductName>{name}</ProductName>
+          <ProductPrice>$ {price}</ProductPrice>
+        </Details>
+      </Col>
+      <Col xs={12} lg={6}>
+        <img className='product-img' src={mediaUrl} />
+      </Col>
+      <Col xs={12} lg={3}>
+        <Floater className='floater'>
           <Row>
             <Col xs={12}>
               <SocialLinks>
@@ -181,7 +199,7 @@ const ProductSummary = ({ name, mediaUrl, _id, price, user }) => {
             </Col>
           </Row>
         </Floater>
-      </Row>
+      </Col>
     </Summary>
   );
 };

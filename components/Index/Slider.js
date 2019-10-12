@@ -71,7 +71,7 @@ const PrevArrow = props => {
 export default class SimpleSlider extends Component {
   render() {
     const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       speed: 1000,
       slidesToShow: 1,
@@ -118,41 +118,6 @@ export default class SimpleSlider extends Component {
               <CartButton>
                 <Button color='primary'>ADD TO CART</Button>
               </CartButton>
-            </div>
-          </div>
-          <div className='slide-holder'>
-            <img src='http://placekitten.com/g/1920/700' />
-            <div className='slide-content'>
-              <p>Slider Title</p>
-              <p>Slider Text</p>
-            </div>
-          </div>
-          <div className='slide-holder'>
-            <img src='http://placekitten.com/g/1920/700' />
-            <div className='slide-content'>
-              <p>Slider Title</p>
-              <p>Slider Text</p>
-            </div>
-          </div>
-          <div className='slide-holder'>
-            <img src='http://placekitten.com/g/1920/700' />
-            <div className='slide-content'>
-              <p>Slider Title</p>
-              <p>Slider Text</p>
-            </div>
-          </div>
-          <div className='slide-holder'>
-            <img src='http://placekitten.com/g/1920/700' />
-            <div className='slide-content'>
-              <p>Slider Title</p>
-              <p>Slider Text</p>
-            </div>
-          </div>
-          <div className='slide-holder'>
-            <img src='http://placekitten.com/g/1920/700' />
-            <div className='slide-content'>
-              <p>Slider Title</p>
-              <p>Slider Text</p>
             </div>
           </div>
         </Slider>

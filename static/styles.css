@@ -60,3 +60,12 @@ body {
 .nav-item {
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .slide-container {
+    margin-top: 75px;
+    margin-left: unset;
+    margin-right: unset;
+    margin-bottom: unset;
+  }
+}

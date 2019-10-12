@@ -7,8 +7,23 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import styled from 'styled-components';
 
 library.add(fas, fab, far);
+
+const Boxer = styled.div`
+  width: auto !important;
+  margin-left: 1em !important;
+  margin-right: 1em !important;
+  padding-left: 7em;
+  padding-right: 7em;
+  padding-bottom: 7em;
+  margin-top: 75px;
+
+  @media (max-width: 767px) {
+    padding: 0 1em 7em 1em !important;
+  }
+`;
 
 function Layout({ children, user }) {
   return (
@@ -40,17 +55,7 @@ function Layout({ children, user }) {
         <title>eCommerce</title>
       </Head>
       <Header user={user} />
-      <Container
-        fluid
-        style={{
-          paddingLeft: '7em',
-          paddingRight: '7em',
-          paddingBottom: '7em',
-          marginTop: '75px'
-        }}
-      >
-        {children}
-      </Container>
+      <Boxer>{children}</Boxer>
     </>
   );
 }

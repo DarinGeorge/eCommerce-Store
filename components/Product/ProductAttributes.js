@@ -36,7 +36,7 @@ const ProductAttributes = ({ description, _id, user }) => {
 
   return (
     <Row>
-      <Col xs={8}>
+      <Col xs={12} md={12} lg={9}>
         <Title>About this product</Title>
         <p>{description}</p>
         {isRootOrAdmin && (

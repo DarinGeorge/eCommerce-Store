@@ -18,7 +18,7 @@ const Item = styled.div`
 const ProductGallery = ({ mediaUrl }) => {
   return (
     <Row>
-      <Col xs={9}>
+      <Col xs={12} md={12} lg={9}>
         <Row>
           <Col xs={6}>
             <Item>
@@ -64,7 +64,7 @@ const ProductGallery = ({ mediaUrl }) => {
           </Col>
         </Row>
       </Col>
-      <Col xs={3}></Col>
+      <Col xs={0} lg={3}></Col>
     </Row>
   );
 };

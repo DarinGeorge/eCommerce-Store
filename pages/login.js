@@ -8,8 +8,8 @@ import baseUrl from '../utils/baseUrl';
 import { handleLogin } from '../utils/auth';
 
 const INITIAL_USER = {
-  email: '',
-  password: ''
+  email: 'admin',
+  password: 'password'
 };
 
 function Signup() {
