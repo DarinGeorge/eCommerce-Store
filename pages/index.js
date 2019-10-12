@@ -3,7 +3,6 @@ import axios from 'axios';
 import ProductList from '../components/Index/ProductList';
 import ProductPagination from '../components/Index/ProductPagination';
 import Carousel from '../components/Index/Slider';
-
 import baseUrl from '../utils/baseUrl';
 
 function Home({ products, totalPages }) {
@@ -11,14 +10,13 @@ function Home({ products, totalPages }) {
     <>
       <Carousel />
       <ProductList products={products} />
-      <ProductPagination totalPages={totalPages} />
     </>
   );
 }
 
 Home.getInitialProps = async ctx => {
   const page = ctx.query.page ? ctx.query.page : '1';
-  const size = 3;
+  const size = 9;
   const url = `${baseUrl}/api/products`;
   const payload = { params: { page, size } };
   // fetch data on server

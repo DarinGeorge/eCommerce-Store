@@ -1,21 +1,22 @@
-import React from "react";
-import { Button, Form, Icon, Message, Segment } from "semantic-ui-react";
-import Link from "next/link";
-import axios from "axios";
-import catchErrors from "../utils/catchErrors";
-import baseUrl from "../utils/baseUrl";
-import { handleLogin } from "../utils/auth";
+import React from 'react';
+import { Button, Form, Icon, Message, Segment } from 'semantic-ui-react';
+import { Container } from 'reactstrap';
+import Link from 'next/link';
+import axios from 'axios';
+import catchErrors from '../utils/catchErrors';
+import baseUrl from '../utils/baseUrl';
+import { handleLogin } from '../utils/auth';
 
 const INITIAL_USER = {
-  email: "",
-  password: ""
+  email: '',
+  password: ''
 };
 
 function Signup() {
   const [user, setUser] = React.useState(INITIAL_USER);
   const [disabled, setDisabled] = React.useState(true);
   const [loading, setLoading] = React.useState(false);
-  const [error, setError] = React.useState("");
+  const [error, setError] = React.useState('');
 
   React.useEffect(() => {
     const isUser = Object.values(user).every(el => Boolean(el));
@@ -32,7 +33,7 @@ function Signup() {
 
     try {
       setLoading(true);
-      setError("");
+      setError('');
       const url = `${baseUrl}/api/login`;
       const payload = { ...user };
       const response = await axios.post(url, payload);
@@ -45,57 +46,57 @@ function Signup() {
   }
 
   return (
-    <>
+    <Container>
       <Message
         attached
-        icon="privacy"
-        header="Welcome Back!"
-        content="Log in with email and password"
-        color="blue"
+        icon='privacy'
+        header='Welcome Back!'
+        content='Log in with email and password'
+        color='blue'
       />
       <Form error={Boolean(error)} loading={loading} onSubmit={handleSubmit}>
-        <Message error header="Oops!" content={error} />
+        <Message error header='Oops!' content={error} />
         <Segment>
           <Form.Input
             fluid
-            icon="envelope"
-            iconPosition="left"
-            label="Email"
-            placeholder="Email"
-            name="email"
-            type="email"
+            icon='envelope'
+            iconPosition='left'
+            label='Email'
+            placeholder='Email'
+            name='email'
+            type='email'
             value={user.email}
             onChange={handleChange}
           />
           <Form.Input
             fluid
-            icon="lock"
-            iconPosition="left"
-            label="Password"
-            placeholder="Password"
-            name="password"
-            type="password"
+            icon='lock'
+            iconPosition='left'
+            label='Password'
+            placeholder='Password'
+            name='password'
+            type='password'
             value={user.password}
             onChange={handleChange}
           />
           <Button
             disabled={disabled || loading}
-            icon="sign in"
-            type="submit"
-            color="orange"
-            content="Login"
+            icon='sign in'
+            type='submit'
+            color='orange'
+            content='Login'
           />
         </Segment>
       </Form>
-      <Message attached="bottom" warning>
-        <Icon name="help" />
-        New user?{" "}
-        <Link href="/signup">
+      <Message attached='bottom' warning>
+        <Icon name='help' />
+        New user?{' '}
+        <Link href='/signup'>
           <a>Sign up here</a>
-        </Link>{" "}
+        </Link>{' '}
         instead.
       </Message>
-    </>
+    </Container>
   );
 }
 

@@ -42,9 +42,6 @@ const ProductList = ({ products }) => {
         centered
         items={mapProductsToItems(products)}
       />
-      <CartButton>
-        <Button color='primary'>Browse</Button>
-      </CartButton>
     </>
   );
 };

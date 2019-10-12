@@ -48,11 +48,15 @@ body {
   background: #fff;
   content: '';
   text-align: center;
-  opacity: .25;
+  opacity: 0.25;
   color: #000;
   -webkit-font-smoothing: antialiased;
 }
-.slick-dots li.slick-active .dot-cont:before{
-  opacity: .75;
-  color: #000;
+.slick-dots li.slick-active .dot-cont:before {
+  opacity: 0.75;
+  background: #007bff;
+}
+
+.nav-item {
+  cursor: pointer;
 }

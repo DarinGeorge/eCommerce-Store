@@ -46,7 +46,7 @@ function Layout({ children, user }) {
           paddingLeft: '7em',
           paddingRight: '7em',
           paddingBottom: '7em',
-          marginTop: '55px'
+          marginTop: '75px'
         }}
       >
         {children}

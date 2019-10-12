@@ -3,5 +3,5 @@
 <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
 <circle fill="#ECE9F150" cx="24" cy="24" r="19"/>
-<polygon fill="#FFF" points="21.1,35.1 18,32 25.9,24.1 18,16.2 21.1,13.1 32,24.1 "/>
+<polygon fill="#000" points="21.1,35.1 18,32 25.9,24.1 18,16.2 21.1,13.1 32,24.1 "/>
 </svg>

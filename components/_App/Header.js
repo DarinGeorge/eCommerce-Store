@@ -47,7 +47,7 @@ export default class Header extends React.Component {
       <div>
         <Navbar
           style={{
-            background: '#ecebf0',
+            background: '#fff',
             borderTop: '5px solid #007bff',
             borderBottom: '1px solid #00000020',
             position: 'fixed',
